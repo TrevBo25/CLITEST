@@ -11,7 +11,7 @@ const files = require('./lib/files');
 clear();
 console.log(
   chalk.yellow(
-    figlet.textSync('Ginit', { horizontalLayout: 'full' })
+    figlet.textSync('CLITEST', { horizontalLayout: 'full' })
   )
 );
 
@@ -30,7 +30,7 @@ const getGithubToken = async () => {
   // No token found, use credentials to access github account
   await github.setGithubCredentials();
 
-  // Check if access token for ginit was registered
+  // Check if access token for clitest was registered
   const accessToken = await github.hasAccessToken();
   if(accessToken) {
     console.log(chalk.yellow('An existing access token has been found!'));
